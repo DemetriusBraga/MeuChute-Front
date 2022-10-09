@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Cairo', sans-serif;
+}
+
+input {
+    outline: 0;
+}
