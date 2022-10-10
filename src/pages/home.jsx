@@ -28,7 +28,7 @@ export const Home = () => {
                         href="/cadastro"
                         className="text-center text-red-700 bg-white text-lg font-bold px-6 py-3 mx-3 rounded-xl"
                     >
-                        Cirar minha conta
+                        Criar minha conta
                     </a>
                     <a
                         href="/login"
