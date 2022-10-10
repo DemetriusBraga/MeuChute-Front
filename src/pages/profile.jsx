@@ -118,11 +118,11 @@ export const Profile = () => {
                                     )}
                                     homeTeamScore={
                                         user?.hunches?.[game.id]
-                                            ?.homeTeamScore || ''
+                                            ?.homeTeamScore || 0
                                     }
                                     awayTeamScore={
                                         user?.hunches?.[game.id]
-                                            ?.awayTeamScore || ''
+                                            ?.awayTeamScore || 0
                                     }
                                     disabled={true}
                                 ></Card>

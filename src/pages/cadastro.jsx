@@ -1,8 +1,9 @@
+import React, { useState } from 'react';
 import axios from 'axios';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import { useLocalStorage } from 'react-use';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 import { Spinner } from '~/components/Spinner';
 import { Icon } from '../components/Icon';
@@ -16,7 +17,7 @@ const validationSchema = yup.object().shape({
 });
 
 export const Cadastro = () => {
-    const [auth, setAuth] = useLocalStorage('auth', {});
+    const [data, setData] = useState();
 
     const formik = useFormik({
         onSubmit: async (values) => {
@@ -27,7 +28,8 @@ export const Cadastro = () => {
                 data: values,
             });
 
-            console.log(res.data);
+            console.log(res.data.id);
+            setData(res.data);
         },
         initialValues: {
             name: '',
@@ -38,8 +40,8 @@ export const Cadastro = () => {
         validationSchema,
     });
 
-    if (auth?.user?.id) {
-        return <Navigate to="/dashboard" replace={true} />;
+    if (data?.id) {
+        return <Navigate to="/login" replace={true} />;
     }
 
     return (

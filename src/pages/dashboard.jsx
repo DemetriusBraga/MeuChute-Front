@@ -75,7 +75,7 @@ export const Dashboard = () => {
             <main>
                 <section id="header" className="bg-red-500 text-white">
                     <div className="container max-w-xl flex flex-col space-y-3 p-4">
-                        <span className="text-lg">Olá Demetrius</span>
+                        <span className="text-lg">{`Olá ${user?.name}`}</span>
                         <h1 className="text-2xl font-bold">
                             Qual é seu palpite?
                         </h1>
@@ -105,11 +105,11 @@ export const Dashboard = () => {
                                     )}
                                     homeTeamScore={
                                         user?.hunches?.[game.id]
-                                            ?.homeTeamScore || ''
+                                            ?.homeTeamScore || 0
                                     }
                                     awayTeamScore={
                                         user?.hunches?.[game.id]
-                                            ?.awayTeamScore || ''
+                                            ?.awayTeamScore || 0
                                     }
                                 />
                             ))}
