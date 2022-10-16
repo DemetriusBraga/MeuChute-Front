@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import { Icon } from '../components/Icon';
 import { Card } from '../components/Card';
 import { DateSelect } from '../components/DateSelect';
+import { SignOut } from 'phosphor-react';
 
 export const Profile = () => {
     const params = useParams();
@@ -67,23 +68,29 @@ export const Profile = () => {
 
     return (
         <div>
-            <header className=" bg-red-500 text-white p-2">
+            <header className=" bg-red-500 text-white p-2 bg-gradient-to-r from-yellow-200 via-rose-400 to-red-700">
                 <div className="container max-w-xl flex justify-between p-2 ">
-                    <img
-                        src="imgs/logo-fundo-vermelho.svg"
-                        className="w-32 md:w-40"
-                    />
+                    <span className="text-lg text-transparent  bg-clip-text bg-gradient-to-r from-rose-800 via-rose-700 to-rose-900 font-bold italic tracking-wider sm:text-3xl">
+                        MeuChute
+                    </span>
+
                     {auth?.user?.id && (
-                        <div className="p-2 cursor-pointer" onClick={logout}>
-                            sair
+                        <div
+                            className="p-2 cursor-pointer text-red-700"
+                            onClick={logout}
+                        >
+                            <SignOut size={28} />
                         </div>
                     )}
                 </div>
             </header>
 
             <main className="space-y-6">
-                <section id="header" className="bg-red-500 text-white">
-                    <div className="container max-w-xl flex flex-col p-4">
+                <section
+                    id="header"
+                    className="bg-red-500 text-white bg-gradient-to-r from-yellow-200 via-rose-400 to-red-700"
+                >
+                    <div className="container text-red-700 max-w-xl flex flex-col p-4">
                         <a href="/dashboard">
                             <Icon name="back" className="w-8 pb-2"></Icon>
                         </a>

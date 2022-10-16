@@ -42,12 +42,12 @@ export const Card = ({
     });
 
     return (
-        <div className="border border-gray-300 rounded-xl p-4 text-center space-y-4">
+        <div className="border border-gray-300 rounded-xl p-4 text-center space-y-4 max-w-sm sm:max-w-xl">
             <span className="text-sm sm:text-base text-gray-700 font-bold">
                 {gameTime}
             </span>
 
-            <form className="flex justify-center items-center space-x-4">
+            <form className="flex justify-center items-center space-x-4 ">
                 <span className="uppercase">{homeTeam}</span>
                 <img src={`flags/${homeTeam}.png`} />
 

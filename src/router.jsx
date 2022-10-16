@@ -1,6 +1,5 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { useLocalStorage } from 'react-use';
 
 import { Home } from './pages/home';
 import { Login } from './pages/login';

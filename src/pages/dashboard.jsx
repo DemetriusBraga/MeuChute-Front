@@ -60,23 +60,29 @@ export const Dashboard = () => {
 
     return (
         <div>
-            <header className=" bg-red-500 text-white p-2">
-                <div className="container max-w-xl flex justify-between p-2 ">
-                    <img
-                        src="imgs/logo-fundo-vermelho.svg"
-                        className="w-32 md:w-40"
-                    />
-                    <a href={`/${auth?.user?.username}`}>
+            <header className=" bg-red-500 text-white p-2 bg-gradient-to-r from-yellow-200 via-rose-400 to-red-700">
+                <div className="container max-w-xl flex justify-between p-2 sm:max-w-xl">
+                    <span className="text-lg text-transparent bg-clip-text bg-gradient-to-r from-rose-800 via-rose-700 to-rose-900 font-bold italic tracking-wider sm:text-3xl">
+                        MeuChute
+                    </span>
+
+                    <a
+                        className="text-red-700 text-lg sm:text-3xl"
+                        href={`/${auth?.user?.username}`}
+                    >
                         <Icon name="profile" className="w-8"></Icon>
                     </a>
                 </div>
             </header>
 
             <main>
-                <section id="header" className="bg-red-500 text-white">
+                <section
+                    id="header"
+                    className="bg-red-500 text-red-700 bg-gradient-to-r from-yellow-200 via-rose-400 to-red-700"
+                >
                     <div className="container max-w-xl flex flex-col space-y-3 p-4">
-                        <span className="text-lg">{`Olá ${user?.name}`}</span>
-                        <h1 className="text-2xl font-bold">
+                        <span className="text-md sm:text-lg">{`Olá ${user?.name}`}</span>
+                        <h1 className="text-xl sm:text-2xl font-bold">
                             Qual é seu palpite?
                         </h1>
                     </div>
@@ -84,7 +90,7 @@ export const Dashboard = () => {
 
                 <section
                     id="content"
-                    className="container max-w-xl p-4 space-y-4"
+                    className="container max-w-xl p-4 space-y-4 "
                 >
                     <DateSelect currentDate={currentDate} onChange={setDate} />
 

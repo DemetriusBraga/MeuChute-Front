@@ -44,12 +44,11 @@ export const Login = () => {
 
     return (
         <div>
-            <header className=" flex p-4 border-b border-red-300">
-                <div className="container max-w-xl flex justify-center">
-                    <img
-                        src="imgs/logo-fundo-branco.svg"
-                        className="w-32 md:w-40"
-                    />
+            <header className=" flex bg-gradient-to-r from-yellow-200 via-rose-400 to-red-700 p-4 border-b border-red-300">
+                <div className="container flex justify-center">
+                    <span className="text-lg font-bold italic text-transparent bg-clip-text bg-gradient-to-r from-rose-800 via-rose-700 to-rose-900 tracking-wider sm:text-3xl">
+                        MeuChute
+                    </span>
                 </div>
             </header>
             <main className="container max-w-xl p-4">

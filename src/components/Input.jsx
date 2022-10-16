@@ -1,7 +1,7 @@
 export const Input = ({ name, label, error, ...props }) => {
     return (
         <div className="flex flex-col">
-            <label htmlFor="name" className="text-sm text-gray-500 mb-2">
+            <label htmlFor={name} className="text-sm text-gray-500 mb-2">
                 {label}
             </label>
             <input
