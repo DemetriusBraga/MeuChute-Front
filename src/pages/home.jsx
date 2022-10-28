@@ -21,18 +21,18 @@ export const Home = () => {
                     <WorldCupLogo></WorldCupLogo>
                 </div>
                 <div className="sm:flex-1 flex flex-col justify-center space-y-4 max-w-md md:max-w-lg">
-                    <h1 className="text-2xl text-slate-200 text-center font-bold sm:text-left mx-3">
+                    <h1 className="text-2xl text-white text-center font-bold sm:text-left mx-3">
                         Dê seu palpite na Copa do Mundo do Catar 2022!
                     </h1>
                     <a
                         href="/cadastro"
-                        className="text-center bg-slate-200 text-slate-900 border border-gray-300 text-lg font-bold px-6 py-3 mx-3 rounded-xl hover:border-gray-100 hover:bg-slate-100 hover:text-slate-600"
+                        className="text-center bg-white text-slate-900 border border-gray-300 text-lg font-bold px-6 py-3 mx-3 rounded-xl hover:border-gray-100 hover:bg-slate-100 hover:text-slate-600"
                     >
                         Criar minha conta
                     </a>
                     <a
                         href="/login"
-                        className="text-center text-slate-200 font-bold border border-gray-300 text-lg px-6 py-3 mx-3 rounded-xl  hover:border-gray-100 hover:text-red-700"
+                        className="text-center text-white font-bold border border-white text-lg px-6 py-3 mx-3 rounded-xl  hover:border-red-700 hover:text-red-700 "
                     >
                         Fazer Login
                     </a>

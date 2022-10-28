@@ -79,7 +79,10 @@ export const Profile = () => {
                             className="p-2 cursor-pointer text-red-700"
                             onClick={logout}
                         >
-                            <SignOut size={28} />
+                            <SignOut
+                                size={28}
+                                className="text-slate-300 sm:text-red-700"
+                            />
                         </div>
                     )}
                 </div>

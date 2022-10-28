@@ -3,6 +3,7 @@ import { useFormik } from 'formik';
 import * as yup from 'yup';
 import { useLocalStorage } from 'react-use';
 import { Navigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 import { Spinner } from '~/components/Spinner';
 import { Icon } from '~/components/Icon';
@@ -10,14 +11,22 @@ import { Input } from '~/components/Input';
 // ~ alias criado no vite.config para acessar a pasta src direto
 
 const validationSchema = yup.object().shape({
-    email: yup.string().required('Preencha seu email'),
-    password: yup.string().required('Digite sua senha'),
+    email: yup.string().email('Email inválido').required('Preencha seu email'),
+    password: yup
+        .string()
+        .min(3, 'Senha muito curta!')
+        .required('Digite sua senha'),
 });
 
 export const Login = () => {
     const [auth, setAuth] = useLocalStorage('auth', {});
+    // const [credentialError, setCredentialError] = useState('');
 
     const formik = useFormik({
+        initialValues: {
+            email: '',
+            password: '',
+        },
         onSubmit: async (values) => {
             const res = await axios({
                 method: 'get',
@@ -27,13 +36,11 @@ export const Login = () => {
                     username: values.email,
                     password: values.password,
                 },
+            }).catch((error) => {
+                toast.error('Email e/ou senha inválido(s)!');
             });
-
             setAuth(res.data);
-        },
-        initialValues: {
-            email: '',
-            password: '',
+            toast.success('Você está conectado(a)!');
         },
         validationSchema,
     });

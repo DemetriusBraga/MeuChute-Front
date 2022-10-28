@@ -70,7 +70,10 @@ export const Dashboard = () => {
                         className="text-red-700 text-lg sm:text-3xl"
                         href={`/${auth?.user?.username}`}
                     >
-                        <Icon name="profile" className="w-8"></Icon>
+                        <Icon
+                            name="profile"
+                            className="w-8 text-slate-300 sm:text-red-700"
+                        ></Icon>
                     </a>
                 </div>
             </header>
@@ -78,7 +81,7 @@ export const Dashboard = () => {
             <main>
                 <section
                     id="header"
-                    className="bg-red-500 text-red-700 bg-gradient-to-r from-yellow-200 via-rose-400 to-red-700"
+                    className=" bg-red-500 text-red-700 bg-gradient-to-r from-yellow-200 via-rose-400 to-red-700"
                 >
                     <div className="container max-w-xl flex flex-col space-y-3 p-4">
                         <span className="text-md sm:text-lg">{`Olá ${user?.name}`}</span>
@@ -90,7 +93,7 @@ export const Dashboard = () => {
 
                 <section
                     id="content"
-                    className="container max-w-xl p-4 space-y-4 "
+                    className="container min-w-fit max-w-xl p-4 space-y-4 "
                 >
                     <DateSelect currentDate={currentDate} onChange={setDate} />
 
