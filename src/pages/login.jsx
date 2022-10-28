@@ -11,7 +11,7 @@ import { Input } from '~/components/Input';
 // ~ alias criado no vite.config para acessar a pasta src direto
 
 const validationSchema = yup.object().shape({
-    email: yup.string().email('Email inválido').required('Preencha seu email'),
+    email: yup.string().email('Email inválido').required('Preencha seu e-mail'),
     password: yup
         .string()
         .min(3, 'Senha muito curta!')
