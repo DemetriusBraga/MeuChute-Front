@@ -20,6 +20,10 @@ export const Card = ({
     const [auth] = useLocalStorage('auth');
 
     const formik = useFormik({
+        initialValues: {
+            homeTeamScore,
+            awayTeamScore,
+        },
         onSubmit: (values) => {
             axios({
                 method: 'post',
@@ -33,10 +37,6 @@ export const Card = ({
                     gameId,
                 },
             });
-        },
-        initialValues: {
-            homeTeamScore,
-            awayTeamScore,
         },
         validationSchema,
     });

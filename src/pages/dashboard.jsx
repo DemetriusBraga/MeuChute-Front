@@ -3,6 +3,7 @@ import { Navigate } from 'react-router-dom';
 import axios from 'axios';
 import { format, formatISO } from 'date-fns';
 import { useEffect, useState } from 'react';
+// import { toast } from 'react-toastify';
 
 import { Icon } from '../components/Icon';
 import { Card } from '../components/Card';
@@ -84,7 +85,7 @@ export const Dashboard = () => {
                     className=" bg-red-500 text-red-700 bg-gradient-to-r from-yellow-200 via-rose-400 to-red-700"
                 >
                     <div className="container max-w-xl flex flex-col space-y-3 p-4">
-                        <span className="text-md sm:text-lg">{`Olá ${user?.name}`}</span>
+                        <span className="text-md sm:text-lg">{`Olá, ${user?.name}`}</span>
                         <h1 className="text-xl sm:text-2xl font-bold">
                             Qual é seu palpite?
                         </h1>
@@ -122,6 +123,17 @@ export const Dashboard = () => {
                                     }
                                 />
                             ))}
+                    </div>
+                    <div className="flex justify-center items-center space-x-4 p-4">
+                        <button
+                            className="border bg-red-500 text-white p-2 rounded-full hover:text-black"
+                            onClick={() => {
+                                window.location.reload();
+                                // toast.success('Palpite salvo com sucesso');
+                            }}
+                        >
+                            Salvar Palpite
+                        </button>
                     </div>
                 </section>
             </main>
