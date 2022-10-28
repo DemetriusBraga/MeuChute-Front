@@ -72,7 +72,7 @@ export const Dashboard = () => {
                     >
                         <Icon
                             name="profile"
-                            className="w-8 text-slate-300 sm:text-red-700"
+                            className="w-7 text-slate-300 sm:text-red-700"
                         ></Icon>
                     </a>
                 </div>

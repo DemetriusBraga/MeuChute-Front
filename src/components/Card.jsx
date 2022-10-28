@@ -47,7 +47,7 @@ export const Card = ({
                 {gameTime}
             </span>
 
-            <form className="flex justify-center items-center space-x-2 sm:space-x-4">
+            <form className="flex justify-center items-center space-x-1 sm:space-x-4">
                 <span className="uppercase">{homeTeam}</span>
                 <img src={`flags/${homeTeam}.png`} />
 

@@ -76,7 +76,7 @@ export const Profile = () => {
 
                     {auth?.user?.id && (
                         <div
-                            className="p-2 cursor-pointer text-red-700"
+                            className=" cursor-pointer text-red-700"
                             onClick={logout}
                         >
                             <SignOut
@@ -95,9 +95,14 @@ export const Profile = () => {
                 >
                     <div className="container text-red-700 max-w-xl flex flex-col p-4">
                         <a href="/dashboard">
-                            <Icon name="back" className="w-8 pb-2"></Icon>
+                            <Icon
+                                name="back"
+                                className="w-7 sm:w-8 pb-2"
+                            ></Icon>
                         </a>
-                        <h1 className="text-2xl font-bold">{user?.name}</h1>
+                        <h1 className="text-xl sm:text-2xl font-bold">
+                            {user?.name}
+                        </h1>
                     </div>
                 </section>
 
