@@ -10,7 +10,7 @@ Então basta criar sua conta, fazer o login e dar seus palpites, que serão salv
 Para enviar o link para seus amigos basta copiar o URL quando estiver no seu perfil. Ex.: meuchute-front.vercel.app/SEU_NOME_DE_USUARIO.
 
 
-Link da aplicação - https://meuchute-front.vercel.app/
+Link da aplicação - [MeuChute](https://meuchute-front.vercel.app/)
 
 
 
