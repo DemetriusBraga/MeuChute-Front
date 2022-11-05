@@ -13,6 +13,5 @@ Para enviar o link para seus amigos basta copiar o URL quando estiver no seu per
 Link da aplicação - [MeuChute](https://meuchute-front.vercel.app/)
 
 
-
-https://user-images.githubusercontent.com/100047230/200058341-8814ad17-3a60-49a4-94d8-4428ae7440e2.mp4
+https://user-images.githubusercontent.com/100047230/200142966-76e013d8-6140-4718-84e1-991ed3ac8c00.mp4
 
