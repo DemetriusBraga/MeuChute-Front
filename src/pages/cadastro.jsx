@@ -11,8 +11,11 @@ import { Input } from '../components/Input';
 const validationSchema = yup.object().shape({
     name: yup.string().required('Preencha seu nome'),
     username: yup.string().required('Preencha seu nome de usuário'),
-    email: yup.string().required('Preencha seu e-mail'),
-    password: yup.string().required('Digite sua senha'),
+    email: yup.string().email('Email inválido').required('Preencha seu e-mail'),
+    password: yup
+        .string()
+        .min(4, 'Senha muito curta!')
+        .required('Digite sua senha'),
 });
 
 export const Cadastro = () => {

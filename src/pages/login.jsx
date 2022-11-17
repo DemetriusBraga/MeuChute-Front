@@ -12,15 +12,11 @@ import { Input } from '~/components/Input';
 
 const validationSchema = yup.object().shape({
     email: yup.string().email('Email inválido').required('Preencha seu e-mail'),
-    password: yup
-        .string()
-        .min(3, 'Senha muito curta!')
-        .required('Digite sua senha'),
+    password: yup.string().required('Digite sua senha'),
 });
 
 export const Login = () => {
     const [auth, setAuth] = useLocalStorage('auth', {});
-    // const [credentialError, setCredentialError] = useState('');
 
     const formik = useFormik({
         initialValues: {

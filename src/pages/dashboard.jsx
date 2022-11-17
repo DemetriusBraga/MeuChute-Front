@@ -3,7 +3,7 @@ import { Navigate } from 'react-router-dom';
 import axios from 'axios';
 import { format, formatISO } from 'date-fns';
 import { useEffect, useState } from 'react';
-// import { toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 import { Icon } from '../components/Icon';
 import { Card } from '../components/Card';
@@ -61,7 +61,7 @@ export const Dashboard = () => {
 
     return (
         <div>
-            <header className=" bg-red-500 text-white p-2 bg-gradient-to-r from-yellow-200 via-rose-400 to-red-700">
+            <header className="  text-white p-2 bg-gradient-to-r from-yellow-200 via-rose-400 to-red-700">
                 <div className="container max-w-xl flex justify-between p-2 sm:max-w-xl">
                     <span className="text-lg text-transparent bg-clip-text bg-gradient-to-r from-rose-800 via-rose-700 to-rose-900 font-bold italic tracking-wider sm:text-3xl">
                         MeuChute
@@ -96,6 +96,28 @@ export const Dashboard = () => {
                     id="content"
                     className="container min-w-fit max-w-xl p-4 space-y-4 "
                 >
+                    <p className="text-red-500 font-semibold ">
+                        Crie seus palpites, salve e compartilhe com os amigos!!{' '}
+                        <br />
+                        Basta copiar a URL abaixo e enviar...
+                    </p>
+                    <p className="text-red-500 font-bold text-sm">
+                        {`meuchute-front.vercel.app/${auth?.user?.username}`}
+                        <span
+                            className="border rounded bg-gray-100 hover:bg-gray-200 ml-2 px-2 cursor-pointer"
+                            onClick={() => {
+                                navigator.clipboard.writeText(
+                                    `meuchute-front.vercel.app/${auth?.user?.username}`
+                                );
+                                toast.success(
+                                    'Link copiado para área de transferência!'
+                                );
+                            }}
+                        >
+                            copiar
+                        </span>
+                    </p>
+
                     <DateSelect currentDate={currentDate} onChange={setDate} />
 
                     <div className="space-y-4">
@@ -123,17 +145,6 @@ export const Dashboard = () => {
                                     }
                                 />
                             ))}
-                    </div>
-                    <div className="flex justify-center items-center space-x-4 p-4">
-                        <button
-                            className="border bg-red-500 text-white p-2 rounded-full hover:text-black"
-                            onClick={() => {
-                                window.location.reload();
-                                // toast.success('Palpite salvo com sucesso');
-                            }}
-                        >
-                            Salvar Palpite
-                        </button>
                     </div>
                 </section>
             </main>

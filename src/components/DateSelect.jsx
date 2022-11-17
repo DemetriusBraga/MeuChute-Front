@@ -19,7 +19,7 @@ export const DateSelect = ({ currentDate, onChange }) => {
         <div className="flex justify-center items-center space-x-4 p-4">
             <Icon
                 name="arrowLeft"
-                className="w-6 text-red-500 "
+                className="w-6 text-red-500 cursor-pointer"
                 onClick={prevDay}
             ></Icon>
             <span className="font-bold">
@@ -27,7 +27,7 @@ export const DateSelect = ({ currentDate, onChange }) => {
             </span>
             <Icon
                 name="arrowRight"
-                className="w-6 text-red-500"
+                className="w-6 text-red-500 cursor-pointer"
                 onClick={nextDay}
             ></Icon>
         </div>

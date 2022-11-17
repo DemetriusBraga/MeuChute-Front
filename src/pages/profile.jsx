@@ -62,10 +62,6 @@ export const Profile = () => {
         fetchGames({ gameTime: currentDate });
     }, [currentDate]);
 
-    // if (!auth?.user?.id) {
-    //     return <Navigate to="/" replace={true} />;
-    // }
-
     return (
         <div>
             <header className=" bg-red-500 text-white p-2 bg-gradient-to-r from-yellow-200 via-rose-400 to-red-700">
@@ -111,7 +107,7 @@ export const Profile = () => {
                     className="container max-w-xl p-4 space-y-4"
                 >
                     <h2 className="text-red-500 text-xl font-bold">
-                        Seus Palpites
+                        Meus Palpites
                     </h2>
 
                     <DateSelect currentDate={currentDate} onChange={setDate} />
@@ -140,6 +136,7 @@ export const Profile = () => {
                                             ?.awayTeamScore || 0
                                     }
                                     disabled={true}
+                                    dontShow={true}
                                 ></Card>
                             ))}
                     </div>
